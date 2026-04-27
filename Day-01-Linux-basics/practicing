@@ -1,0 +1,82 @@
+1. Navigation & Inspection
+Use these to "orient" yourself within the Linux filesystem.
+
+pwd: Present Working Directory. Run this to see exactly where you are in the folder hierarchy.
+
+ls: List files and folders.
+
+ls -l: List files with detailed information (permissions, size, owner).
+
+history: Shows a list of all commands you have typed in this session (perfect for proof of work).
+
+
+
+2. File & Directory Operations
+The core "building blocks" of managing a server.
+
+mkdir <folder_name>: Create a new directory (e.g., mkdir Day1-Practice).
+
+cd <folder_name>: Move into that directory.
+
+touch <file_name>: Create an empty file (e.g., touch myscript.sh).
+
+cat <file_name>: View the contents of a file in the terminal.
+
+rm -r <folder_name>: Delete a directory and its contents (Use with caution!).
+
+
+
+3. System Health & Resources
+DevOps engineers use these to monitor server performance.
+
+df -h: Check disk space usage in a "human-readable" format (GB/MB).
+
+top: Displays real-time CPU, RAM, and process usage. This is your "Task Manager" in the terminal.
+
+
+
+4. Permission Logic (The Math)
+This is a key part of your notes. Practice assigning specific permissions:
+
+The Values: Read (4), Write (2), Execute (1).
+
+chmod 777 <file>: Full access for everyone (4+2+1 for User, Group, and Others).
+
+Try this practice:
+
+chmod 700 <file>: Only the User can read/write/execute.
+
+chmod 644 <file>: User can read/write; others can only read.
+
+
+
+5. Shell Scripting Automation
+Create a file called automation.sh and add these lines to practice "Best Practices":
+
+Bash
+#!/bin/bash
+
+# Best practice commands from your notes:
+set -x          # Debug mode: shows each command before executing
+set -e          # Exit immediately if a command fails
+set -o pipefail # Catch errors in piped commands
+
+echo "Starting Day 1 Automation Practice..."
+
+# Create a test environment
+mkdir -p devops_practice
+cd devops_practice
+touch log_$(date +%F).txt
+
+echo "Setup complete. Checking system status..."
+df -h
+
+
+6. AWS Practical (Day 2 Preview)
+From the diagrams you provided, here is what you practiced/noted for AWS:
+
+Identity: Navigating to "Security Credentials" to get your Access Keys.
+
+Authentication: Using aws configure to verify your CLI is linked to your account.
+
+Verification: Running aws --version or aws help to ensure the binary is installed correctly.
